@@ -14,6 +14,8 @@
 		8910309920F10FCE001953E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8910309720F10FCE001953E7 /* LaunchScreen.storyboard */; };
 		891030A420F10FCE001953E7 /* Password_AutofillTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891030A320F10FCE001953E7 /* Password_AutofillTests.swift */; };
 		891030AF20F10FCE001953E7 /* Password_AutofillUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891030AE20F10FCE001953E7 /* Password_AutofillUITests.swift */; };
+		891030BD20F1166E001953E7 /* security.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 891030BC20F1166D001953E7 /* security.jpg */; };
+		891030BF20F1175A001953E7 /* private.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 891030BE20F1175A001953E7 /* private.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		891030AA20F10FCE001953E7 /* Password AutofillUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Password AutofillUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		891030AE20F10FCE001953E7 /* Password_AutofillUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password_AutofillUITests.swift; sourceTree = "<group>"; };
 		891030B020F10FCE001953E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		891030BC20F1166D001953E7 /* security.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = security.jpg; sourceTree = "<group>"; };
+		891030BE20F1175A001953E7 /* private.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = private.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 		8910308D20F10FC8001953E7 /* Password Autofill */ = {
 			isa = PBXGroup;
 			children = (
+				891030BE20F1175A001953E7 /* private.jpg */,
+				891030BC20F1166D001953E7 /* security.jpg */,
 				8910308E20F10FC8001953E7 /* AppDelegate.swift */,
 				8910309020F10FC8001953E7 /* ViewController.swift */,
 				8910309220F10FC8001953E7 /* Main.storyboard */,
@@ -230,7 +236,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8910309920F10FCE001953E7 /* LaunchScreen.storyboard in Resources */,
+				891030BD20F1166E001953E7 /* security.jpg in Resources */,
 				8910309620F10FCE001953E7 /* Assets.xcassets in Resources */,
+				891030BF20F1175A001953E7 /* private.jpg in Resources */,
 				8910309420F10FC8001953E7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H28X75MLUY;
 				INFOPLIST_FILE = "Password Autofill/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -448,6 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H28X75MLUY;
 				INFOPLIST_FILE = "Password Autofill/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

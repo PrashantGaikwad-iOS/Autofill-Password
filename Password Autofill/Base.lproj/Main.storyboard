@@ -1,24 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n1R-Hv-aEt">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Password Autofill-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Password_Autofill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="security.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="u0t-Dw-hij">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3f9-QQ-4fw">
+                                <rect key="frame" x="16" y="110" width="635" height="30"/>
+                                <color key="backgroundColor" red="0.94076177341428568" green="0.82745098039999998" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OtK-Qd-9zi">
+                                <rect key="frame" x="16" y="160" width="635" height="30"/>
+                                <color key="backgroundColor" red="0.94076177341428568" green="0.82745098039999998" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZx-dm-ZCk">
+                                <rect key="frame" x="16" y="225" width="635" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.72334139500000005" blue="0.10690307810000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="LOGIN"/>
+                                <connections>
+                                    <action selector="logInAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0mD-SL-E78"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.034939933329999999" green="0.61192519430000003" blue="0.20677426779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="u0t-Dw-hij" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="1ec-MZ-jP5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OtK-Qd-9zi" secondAttribute="trailing" constant="16" id="297-Zo-bWs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QZx-dm-ZCk" secondAttribute="trailing" constant="16" id="486-0I-w9h"/>
+                            <constraint firstItem="u0t-Dw-hij" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="B5G-U3-PXA"/>
+                            <constraint firstItem="OtK-Qd-9zi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="HC1-Nl-OFi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3f9-QQ-4fw" secondAttribute="trailing" constant="16" id="TGr-qp-CK8"/>
+                            <constraint firstItem="3f9-QQ-4fw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Twj-0W-cIr"/>
+                            <constraint firstItem="3f9-QQ-4fw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="78" id="WYf-cw-nkq"/>
+                            <constraint firstItem="QZx-dm-ZCk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dTi-yF-PZb"/>
+                            <constraint firstItem="QZx-dm-ZCk" firstAttribute="top" secondItem="OtK-Qd-9zi" secondAttribute="bottom" constant="35" id="e1Z-w7-gkN"/>
+                            <constraint firstItem="u0t-Dw-hij" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="g6i-5K-e5y"/>
+                            <constraint firstItem="u0t-Dw-hij" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jCy-5n-2Zn"/>
+                            <constraint firstItem="OtK-Qd-9zi" firstAttribute="top" secondItem="3f9-QQ-4fw" secondAttribute="bottom" constant="20" id="qEa-lt-FY0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Password Autofill" id="hUt-wq-dit"/>
+                    <connections>
+                        <outlet property="password" destination="OtK-Qd-9zi" id="a5m-Rs-ZiK"/>
+                        <outlet property="username" destination="3f9-QQ-4fw" id="a3I-w4-pB5"/>
+                        <segue destination="sAk-dB-aL0" kind="show" identifier="detailView" id="2gU-bR-VQA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1075.4122938530736" y="130.40000000000001"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lgw-bo-VRi">
+            <objects>
+                <viewController id="sAk-dB-aL0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K3h-rB-bS6">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="private.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="jJs-wA-SDa">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jJs-wA-SDa" firstAttribute="top" secondItem="K3h-rB-bS6" secondAttribute="top" id="4YW-nk-OPl"/>
+                            <constraint firstItem="jJs-wA-SDa" firstAttribute="trailing" secondItem="K3h-rB-bS6" secondAttribute="trailing" id="DFe-NC-41X"/>
+                            <constraint firstItem="jJs-wA-SDa" firstAttribute="leading" secondItem="K3h-rB-bS6" secondAttribute="leading" id="MVq-34-zTL"/>
+                            <constraint firstItem="jJs-wA-SDa" firstAttribute="bottom" secondItem="K3h-rB-bS6" secondAttribute="bottom" id="lMz-K9-e9p"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xf5-3C-g9h"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IAf-Og-kFy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1882.3088455772115" y="143.19999999999999"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6zu-Zj-yfB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n1R-Hv-aEt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MNG-W7-TNV">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hMI-l5-LM4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ehS-07-Tms" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="131.78410794602701"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="private.jpg" width="5391" height="3594"/>
+        <image name="security.jpg" width="5598" height="3657"/>
+    </resources>
 </document>
